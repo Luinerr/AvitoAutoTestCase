@@ -27,39 +27,31 @@ public class HelpDeskTest extends BaseSeleniumTest {
 
     @Test
     public void checkPopUpWindowIsUp() {
-
         pageProduct.clickButtonAddFavourites();
         Assert.assertTrue(pageProduct.isPopUpWindowAppeared());
         analyzeLog(true);
-
     }
 
     @Test
     public void checkPopUpWindowHasText() {
-
         pageProduct.clickButtonAddFavourites();
         Assert.assertEquals(pageProduct.getTitlePopUpWindow(), TestValues.TEST_POP_UP_TEXT);
         analyzeLog(true);
-
     }
 
     @Test
     public void checkPopUpWindowIsClosed() {
-
         pageProduct.clickButtonAddFavourites();
         Assert.assertFalse(pageProduct.isPopUpWindowClosed());
         analyzeLog(true);
-
     }
 
     @Test
     public void checkButtonAddFavouritesChangeHeart() {
-
         String firstStyle = pageProduct.getAttributeOfHeartAddFavorites();
         pageProduct.clickButtonAddFavourites();
         Assert.assertNotEquals(firstStyle, pageProduct.getAttributeOfHeartAddFavorites());
         analyzeLog(true);
-
     }
 
     @Test
