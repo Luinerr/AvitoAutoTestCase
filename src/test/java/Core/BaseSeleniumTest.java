@@ -68,13 +68,16 @@ abstract public class BaseSeleniumTest {
     protected static File fileLog;
 
     protected static String nameTest;
+
+    protected static String statusTest;
+
     /**
      * Инициализация настроек браузера и окружения для тестов
      */
     @BeforeClass
     public static void setUp() {
         //Создание папки со временем, когда были запущен тесты
-        pattern =  "yyyy_MM_dd___HH_mm_ss";
+        pattern = "yyyy_MM_dd___HH_mm_ss";
         timeStamp = new SimpleDateFormat(pattern).format((new Date()));
         directory = new File("src/test/log/" + timeStamp);
         directory.mkdir();
@@ -86,8 +89,6 @@ abstract public class BaseSeleniumTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
 
         //инициализация драйвера
         WebDriverManager.chromedriver().setup();
@@ -121,7 +122,7 @@ abstract public class BaseSeleniumTest {
         item = parseStringItemFromUrl(ConfProperties.getProperty("urlProduct"));
         pageProduct = new PageProduct(ConfProperties.getProperty("urlProduct"));
         pageFavourites = new PageFavourites(item);
-        if(pageProduct.getTitleButtonAddFavourites().equals("В избранном")) {
+        if (pageProduct.getTitleButtonAddFavourites().equals("В избранном")) {
             pageProduct.clickButtonAddFavourites();
         }
         /*
@@ -129,20 +130,30 @@ abstract public class BaseSeleniumTest {
          */
         try {
             driverWaitBeforeTest.until(ExpectedConditions.alertIsPresent());
-        } catch (Exception ignored) { }
+        } catch (Exception ignored) {
+        }
     }
 
     /**
      * Метод для анализа и вывода логов в консоль
      * Перебросить в ScreenShotRule
      */
-    public void analyzeLog() {
+    public static void analyzeLog(Boolean a) {
         LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
         try {
             FileWriter writerUp = new FileWriter(fileLog, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writerUp);
             bufferedWriter.write("Starting test:" + nameTest);
             bufferedWriter.write(System.getProperty("line.separator"));
+            if (a) {
+                System.out.println("StatusTest: passed");
+                bufferedWriter.write("StatusTest: passed");
+                bufferedWriter.write(System.getProperty("line.separator"));
+            } else {
+                System.out.println("StatusTest: failed");
+                bufferedWriter.write("StatusTest: failed");
+                bufferedWriter.write(System.getProperty("line.separator"));
+            }
             bufferedWriter.close();
             writerUp.close();
         } catch (IOException e) {
@@ -176,6 +187,7 @@ abstract public class BaseSeleniumTest {
 
     /**
      * Парсер урла. Пока бесполезен.
+     *
      * @param url
      * @return item
      */
@@ -186,6 +198,7 @@ abstract public class BaseSeleniumTest {
 
     /**
      * Возвратить копию номера продукта. Пока не работает.
+     *
      * @return
      */
     public static String getItem() {
@@ -194,5 +207,9 @@ abstract public class BaseSeleniumTest {
 
     public static void setNameTest(String name) {
         nameTest = name;
+    }
+
+    public static void setStatusTest(String status) {
+        statusTest = status;
     }
 }

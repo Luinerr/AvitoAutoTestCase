@@ -27,101 +27,77 @@ public class HelpDeskTest extends BaseSeleniumTest {
 
     @Test
     public void checkPopUpWindowIsUp() {
-        try {
-            pageProduct.clickButtonAddFavourites();
-            Assert.assertTrue(pageProduct.isPopUpWindowAppeared());
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+
+        pageProduct.clickButtonAddFavourites();
+        Assert.assertTrue(pageProduct.isPopUpWindowAppeared());
+        analyzeLog(true);
+
     }
 
     @Test
     public void checkPopUpWindowHasText() {
-        try {
-            pageProduct.clickButtonAddFavourites();
-            Assert.assertEquals(pageProduct.getTitlePopUpWindow(), TestValues.TEST_POP_UP_TEXT);
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+
+        pageProduct.clickButtonAddFavourites();
+        Assert.assertEquals(pageProduct.getTitlePopUpWindow(), TestValues.TEST_POP_UP_TEXT);
+        analyzeLog(true);
+
     }
 
     @Test
     public void checkPopUpWindowIsClosed() {
-        try {
-            pageProduct.clickButtonAddFavourites();
-            Assert.assertFalse(pageProduct.isPopUpWindowClosed());
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+
+        pageProduct.clickButtonAddFavourites();
+        Assert.assertFalse(pageProduct.isPopUpWindowClosed());
+        analyzeLog(true);
+
     }
 
     @Test
     public void checkButtonAddFavouritesChangeHeart() {
-        try {
-            String firstStyle = pageProduct.getAttributeOfHeartAddFavorites();
-            pageProduct.clickButtonAddFavourites();
-            Assert.assertNotEquals(firstStyle, pageProduct.getAttributeOfHeartAddFavorites());
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+
+        String firstStyle = pageProduct.getAttributeOfHeartAddFavorites();
+        pageProduct.clickButtonAddFavourites();
+        Assert.assertNotEquals(firstStyle, pageProduct.getAttributeOfHeartAddFavorites());
+        analyzeLog(true);
+
     }
 
     @Test
     public void checkProductInFavourites() {
-        try {
-            pageProduct.clickButtonAddFavourites()
-                    .openPageFavorites();
-            Assert.assertTrue(pageFavourites.isFavouriteElementAdded());
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+        pageProduct.clickButtonAddFavourites()
+                .openPageFavorites();
+        Assert.assertTrue(pageFavourites.isFavouriteElementAdded());
+        analyzeLog(true);
     }
 
     @Test
     public void checkTextProductInFavourites() {
-        try {
-            pageProduct.clickButtonAddFavourites()
-                    .openPageFavorites();
-            Assert.assertEquals(pageFavourites.getFavouriteElementTitle(), TestValues.TEST_NAME_PRODUCT);
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+        pageProduct.clickButtonAddFavourites()
+                .openPageFavorites();
+        Assert.assertEquals(TestValues.TEST_NAME_PRODUCT, pageFavourites.getFavouriteElementTitle());
+        analyzeLog(true);
     }
 
     @Test
     public void checkProductAddedLastInFavourites() {
-        try {
-            PageProduct pageProduct1 = new PageProduct(ConfProperties.getProperty("urlProduct1"));
-            pageProduct1.clickButtonAddFavourites()
-                    .openPageProduct(pageProduct)
-                    .clickButtonAddFavourites()
-                    .openPageFavorites();
-            Assert.assertTrue(pageFavourites.isFavouriteElementAddedLast());
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+        PageProduct pageProduct1 = new PageProduct(ConfProperties.getProperty("urlProduct1"));
+        pageProduct1.clickButtonAddFavourites()
+                .openPageProduct(pageProduct)
+                .clickButtonAddFavourites()
+                .openPageFavorites();
+        Assert.assertTrue(pageFavourites.isFavouriteElementAddedLast());
+        analyzeLog(true);
     }
 
     @Test
     public void checkProductAddedNotLastInFavourites() {
-        try {
-            PageProduct pageProduct1 = new PageProduct(ConfProperties.getProperty("urlProduct1"));
-            pageProduct1.openPageProduct(pageProduct)
-                    .clickButtonAddFavourites()
-                    .openPageProduct(pageProduct1)
-                    .clickButtonAddFavourites()
-                    .openPageFavorites();
-            Assert.assertFalse(pageFavourites.isFavouriteElementAddedNotLast());
-            analyzeLog();
-        } catch (Exception e) {
-            analyzeLog();
-        }
+        PageProduct pageProduct1 = new PageProduct(ConfProperties.getProperty("urlProduct1"));
+        pageProduct1.openPageProduct(pageProduct)
+                .clickButtonAddFavourites()
+                .openPageProduct(pageProduct1)
+                .clickButtonAddFavourites()
+                .openPageFavorites();
+        Assert.assertFalse(pageFavourites.isFavouriteElementAddedNotLast());
+        analyzeLog(true);
     }
 }

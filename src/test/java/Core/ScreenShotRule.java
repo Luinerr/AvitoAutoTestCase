@@ -30,6 +30,7 @@ public class ScreenShotRule extends TestWatcher {
             throw new RuntimeException(ioe);
         }
 
+        BaseSeleniumTest.analyzeLog(false);
     }
 
     private File getDestinationFile(File directory) {
