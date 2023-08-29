@@ -1,0 +1,7 @@
+Tue Aug 29 23:09:07 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:09:07 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:09:10 MSK 2023 SEVERE https://ad.adriver.ru/cgi-bin/erle.cgi?sid=223878&bt=62&custom=157%3Dundefined%3B10%3D2639542363%3B206%3DDSPCounter&ph=0&rnd=161091&tail256=unknown&gid1=1556442033.1693339746&tuid=-6204943818 - Failed to load resource: net::ERR_CONNECTION_RESET
+Tue Aug 29 23:09:19 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:09:19 MSK 2023 SEVERE chrome-extension://invalid/ - Failed to load resource: net::ERR_FAILED
+Tue Aug 29 23:09:24 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:09:24 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"

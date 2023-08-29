@@ -1,0 +1,22 @@
+Tue Aug 29 23:12:24 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:12:24 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:12:28 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:12:28 MSK 2023 SEVERE chrome-extension://invalid/ - Failed to load resource: net::ERR_FAILED
+Tue Aug 29 23:12:32 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:12:32 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:12:35 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:12:36 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:12:36 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:12:40 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:12:41 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:12:41 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:12:43 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:12:44 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:12:44 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:12:46 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:14:11 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
+Tue Aug 29 23:14:11 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:14:11 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:14:19 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react (required ^16.14.0)"
+Tue Aug 29 23:14:19 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
+Tue Aug 29 23:14:19 MSK 2023 SEVERE https://www.avito.ru/web/1/criteo/cookieMatch - Failed to load resource: the server responded with a status of 400 ()
