@@ -1,2 +1,0 @@
-
-Tue Aug 29 23:01:54 MSK 2023 WARNING https://www.avito.ru/dstatic/build/client/sentry.896472b96e38a463407d.js 1:34840 "Unsatisfied version 18.2.0 from avito-desktop-site of shared singleton module react-dom (required ^16.14.0)"
