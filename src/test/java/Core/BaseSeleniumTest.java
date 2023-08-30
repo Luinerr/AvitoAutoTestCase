@@ -1,20 +1,19 @@
 package Core;
 
-import helpDesk.PageFavourites;
-import helpDesk.PageProduct;
+import TestClass.PageFavourites;
+import TestClass.PageProduct;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import readProperties.ConfProperties;
+import ReadProperties.ConfProperties;
 
 import java.io.BufferedWriter;
 import java.io.File;

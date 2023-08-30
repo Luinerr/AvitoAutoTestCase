@@ -1,4 +1,4 @@
-package helpDesk;
+package TestClass;
 
 import Core.BaseSeleniumTest;
 import Core.ScreenShotRule;
@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
-import readProperties.ConfProperties;
+import ReadProperties.ConfProperties;
 
 public class TestAddFavourites extends BaseSeleniumTest {
 

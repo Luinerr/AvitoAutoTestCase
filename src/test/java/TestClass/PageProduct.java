@@ -1,4 +1,4 @@
-package helpDesk;
+package TestClass;
 
 import Core.BaseSeleniumPage;
 import Core.BaseSeleniumTest;
