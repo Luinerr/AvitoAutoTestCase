@@ -1,6 +1,5 @@
 package Core;
 
-import helpDesk.HelpDeskTest;
 import helpDesk.PageFavourites;
 import helpDesk.PageProduct;
 import io.github.bonigarcia.wdm.WebDriverManager;

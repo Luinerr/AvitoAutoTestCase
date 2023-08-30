@@ -11,7 +11,7 @@ import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import readProperties.ConfProperties;
 
-public class HelpDeskTest extends BaseSeleniumTest {
+public class TestAddFavourites extends BaseSeleniumTest {
 
     @Rule
     public TestRule watcher = new TestWatcher() {
