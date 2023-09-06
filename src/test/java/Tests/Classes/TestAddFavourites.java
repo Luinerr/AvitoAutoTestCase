@@ -1,49 +1,35 @@
-package TestClass;
+package Tests.Classes;
 
-import Core.BaseSeleniumTest;
-import Core.ScreenShotRule;
-import TestValues.TestValues;
+import Settings.Core.RuleResultTests;
+import Tests.Pages.PageProduct;
+import Settings.SubCore.BaseAddFavorite;
+import Settings.TestValues.TestValuesAddFavourite;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestRule;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
-import ReadProperties.ConfProperties;
+import Settings.Assistant.ReadProperties.ConfProperties;
 
-public class TestAddFavourites extends BaseSeleniumTest {
+public class TestAddFavourites extends BaseAddFavorite {
 
     @Rule
-    public TestRule watcher = new TestWatcher() {
-        protected void starting(Description description) {
-            ScreenShotRule.setName(description.getMethodName());
-            BaseSeleniumTest.setNameTest(description.getMethodName());
-            System.out.println("Starting test: " + description.getMethodName());
-        }
-    };
-
-    @Rule
-    public ScreenShotRule screenShotRule = new ScreenShotRule(driver);
+    public RuleResultTests ruleResultTests = new RuleResultTests(driver);
 
     @Test
     public void checkPopUpWindowIsUp() {
         pageProduct.clickButtonAddFavourites();
         Assert.assertTrue(pageProduct.isPopUpWindowAppeared());
-        analyzeLog(true);
     }
 
     @Test
     public void checkPopUpWindowHasText() {
         pageProduct.clickButtonAddFavourites();
-        Assert.assertEquals(pageProduct.getTitlePopUpWindow(), TestValues.TEST_POP_UP_TEXT);
-        analyzeLog(true);
+        Assert.assertEquals(pageProduct.getTitlePopUpWindow(), TestValuesAddFavourite.TEST_POP_UP_TEXT);
     }
 
     @Test
     public void checkPopUpWindowIsClosed() {
         pageProduct.clickButtonAddFavourites();
         Assert.assertFalse(pageProduct.isPopUpWindowClosed());
-        analyzeLog(true);
     }
 
     @Test
@@ -51,7 +37,6 @@ public class TestAddFavourites extends BaseSeleniumTest {
         String firstStyle = pageProduct.getAttributeOfHeartAddFavorites();
         pageProduct.clickButtonAddFavourites();
         Assert.assertNotEquals(firstStyle, pageProduct.getAttributeOfHeartAddFavorites());
-        analyzeLog(true);
     }
 
     @Test
@@ -59,15 +44,13 @@ public class TestAddFavourites extends BaseSeleniumTest {
         pageProduct.clickButtonAddFavourites()
                 .openPageFavorites();
         Assert.assertTrue(pageFavourites.isFavouriteElementAdded());
-        analyzeLog(true);
     }
 
     @Test
     public void checkTextProductInFavourites() {
         pageProduct.clickButtonAddFavourites()
                 .openPageFavorites();
-        Assert.assertEquals(TestValues.TEST_NAME_PRODUCT, pageFavourites.getFavouriteElementTitle());
-        analyzeLog(true);
+        Assert.assertEquals(TestValuesAddFavourite.TEST_NAME_PRODUCT, pageFavourites.getFavouriteElementTitle());
     }
 
     @Test
@@ -78,7 +61,6 @@ public class TestAddFavourites extends BaseSeleniumTest {
                 .clickButtonAddFavourites()
                 .openPageFavorites();
         Assert.assertTrue(pageFavourites.isFavouriteElementAddedLast());
-        analyzeLog(true);
     }
 
     @Test
@@ -90,6 +72,5 @@ public class TestAddFavourites extends BaseSeleniumTest {
                 .clickButtonAddFavourites()
                 .openPageFavorites();
         Assert.assertFalse(pageFavourites.isFavouriteElementAddedNotLast());
-        analyzeLog(true);
     }
 }

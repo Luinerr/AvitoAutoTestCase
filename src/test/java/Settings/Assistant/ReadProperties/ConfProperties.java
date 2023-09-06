@@ -1,9 +1,12 @@
-package ReadProperties;
+package Settings.Assistant.ReadProperties;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * Надо бы это изменить!
+ */
 public class ConfProperties {
     protected static FileInputStream fileInputStream;
     protected static Properties PROPERTIES;

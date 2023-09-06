@@ -1,7 +1,7 @@
-package TestClass;
+package Tests.Pages;
 
-import Core.BaseSeleniumPage;
-import Core.BaseSeleniumTest;
+import Settings.Core.BaseSeleniumPage;
+import Settings.Core.BaseSeleniumTest;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
