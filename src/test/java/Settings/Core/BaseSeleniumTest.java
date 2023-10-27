@@ -1,19 +1,15 @@
-package Core;
+package Settings.Core;
 
-import TestClass.PageFavourites;
-import TestClass.PageProduct;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
-import org.junit.Before;
+
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ReadProperties.ConfProperties;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -37,14 +33,7 @@ abstract public class BaseSeleniumTest {
      * Ожидание между тестами для не получения бана
      */
     protected static WebDriverWait driverWaitBeforeTest;
-    /**
-     * Страница продукта
-     */
-    protected PageProduct pageProduct;
-    /**
-     * Страница избранное
-     */
-    protected PageFavourites pageFavourites;
+
     /**
      * Из урл берет конец строки, где указан id продукта и записывает в item
      * Пока не реализовано, тк аннотация @FindBy не принимает параметры
@@ -72,6 +61,7 @@ abstract public class BaseSeleniumTest {
 
     /**
      * Инициализация настроек браузера и окружения для тестов
+     * Надо добавить название класс?
      */
     @BeforeClass
     public static void setUp() {
@@ -112,27 +102,6 @@ abstract public class BaseSeleniumTest {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         BaseSeleniumPage.setDriver(driver, driverWaitForElement);
     }
-
-    /**
-     * Настройки перед каждый тестом
-     */
-    @Before
-    public void setUpTest() {
-        item = parseStringItemFromUrl(ConfProperties.getProperty("urlProduct"));
-        pageProduct = new PageProduct(ConfProperties.getProperty("urlProduct"));
-        pageFavourites = new PageFavourites(item);
-        if (pageProduct.getTitleButtonAddFavourites().equals("В избранном")) {
-            pageProduct.clickButtonAddFavourites();
-        }
-        /*
-         * Ожидание перед тестом. иначе бан.¯\_(ツ)_/¯
-         */
-        try {
-            driverWaitBeforeTest.until(ExpectedConditions.alertIsPresent());
-        } catch (Exception ignored) {
-        }
-    }
-
     /**
      * Метод для анализа и вывода логов в консоль
      * Перебросить в ScreenShotRule
@@ -190,7 +159,7 @@ abstract public class BaseSeleniumTest {
      * @param url
      * @return item
      */
-    private String parseStringItemFromUrl(String url) {
+    public String parseStringItemFromUrl(String url) {
         String itemProduct = url.substring(url.lastIndexOf('_') + 1);
         return itemProduct;
     }

@@ -1,6 +1,6 @@
-package TestClass;
+package Tests.Pages;
 
-import Core.BaseSeleniumPage;
+import Settings.Core.BaseSeleniumPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
